@@ -1,3 +1,3 @@
-# Zomibies.py
+# Zombies.py
 
-print("Zombies apocalypes is coming...")
+print("Zombie apocalypse is coming...")
