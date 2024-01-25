@@ -1,14 +1,20 @@
+
 import random
 
-def guess(x):
-    rand_number = random.randint(1, x)
-    guess = 0
-    while guess != rand_number:
-        guess = int(input(f"Guess a number between 1 and {x}: "))
-        if guess < rand_number:
-            print('Sorry, guess again. Too low.')
-        elif guess > rand_number:
-            print('Sorry, guess again. Too high')
-    print(f"Congrats. You guessed the number {rand_number} correctly!")
+def play():
+    user = input("'R' for rock, 'P' for paper, 'S' for scissors\n")
+    computer = random.choice(['r', 'p', 's'])
+    if user == computer:
+        return 'It\'s a tie'
 
-guess(10)
+    if is_win(user, computer):
+        return 'You won!'
+
+    return 'You lost!'
+
+
+def is_win(player, opponent):
+        if (player == 'R' and opponent == 'S') or (player == 'S' and opponent == 'P') or (player == 'P' and opponent == 'R'):
+            return True
+
+print(play())
