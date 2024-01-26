@@ -25,7 +25,7 @@ class MyFrame(wx.Frame):
         brand = self.txt.GetValue()
         user_input = brand.lower()
         try:
-        #wolframalpha
+            #wolframalpha
             app_id = "HWWEQW-2J96G39LYU"
             client = wolframalpha.Client(app_id)
             result = client.query(user_input)
